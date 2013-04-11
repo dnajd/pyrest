@@ -6,9 +6,13 @@ Example building rest services in python and interacting with DynamoDB
 Setup
 =====
 
-Install pip, flask, boto, dynamodb-mapper
+Pip & sqlite
 
-    sudo apt-get install pip
+    sudo apt-get install pip    
+    sudo apt-get install sqlite3 libsqlite3-dev
+
+Python Packages: pip, flask, boto, dynamodb-mapper
+
     pip install Flask
     pip install boto
     pip install dynamodb-mapper    

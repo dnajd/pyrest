@@ -6,14 +6,22 @@ Example building rest services in python and interacting with DynamoDB
 Setup
 =====
 
-Install pip if you don't have it
+Install pip
 
     sudo apt-get install pip
 
-Then install Flask
+Install Flask
 
     pip install Flask
 
+Install boto
+
+    pip install boto
+
+Install dynamodb-mapper
+
+    pip install dynamodb-mapper    
+    
 
 Documentation
 ==============

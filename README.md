@@ -1,6 +1,7 @@
 PyRest
 ======
-Example of python rest with flask
+
+Example building rest services in python and interacting with DynamoDB 
 
 Setup
 =====
@@ -15,4 +16,11 @@ Then install Flask
 Documentation
 ==============
 
-http://flask.pocoo.org/docs/quickstart/
+REST Python Package
+* http://flask.pocoo.org/docs/quickstart/
+* built on WSGI wrapper: http://werkzeug.pocoo.org/
+
+DynamoDB Python Package
+* https://pypi.python.org/pypi/dynamodb-mapper
+* built on AWS wrapper: https://github.com/boto/boto
+

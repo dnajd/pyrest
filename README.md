@@ -26,4 +26,4 @@ DynamoDB Python Package
 * https://pypi.python.org/pypi/dynamodb-mapper
 * built on AWS wrapper: https://github.com/boto/boto
 * mocking dynamodb: https://pypi.python.org/pypi/ddbmock/1.0.1
-** helpful article on how to [setup mocks](http://stackoverflow.com/questions/14617160/how-to-use-ddbmock-with-dynamodb-mapper)
+ * helpful article on how to [setup mocks](http://stackoverflow.com/questions/14617160/how-to-use-ddbmock-with-dynamodb-mapper)

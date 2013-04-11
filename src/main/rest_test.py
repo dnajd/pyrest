@@ -5,6 +5,7 @@ from dynamodb_mapper.model import ConnectionBorg
 from ddbmock import config
 from ddbmock import connect_boto_patch
 from flask import Flask
+from flask import request
 from db_models import TestMap
 
 ###########################
@@ -14,6 +15,7 @@ config.STORAGE_ENGINE_NAME = 'sqlite'                   # switch to sqlite backe
 config.STORAGE_SQLITE_FILE = '/tmp/pyrest.sqlite'       # define the database path. defaults to 'dynamo.db'
 db = connect_boto_patch()                               # Wire-up boto and ddbmock together
 
+
 ###########################
 # Flash routes
 
@@ -21,20 +23,24 @@ db = connect_boto_patch()                               # Wire-up boto and ddbmo
 app = Flask(__name__)
 
 # POST: /test/new
-@app.route('/test/new', methods=['GET'])
+@app.route('/test/new', methods=['POST'])
 def post_test():
+    # create map
     t1 = TestMap()
     t1.test_key = 1
-    t1.name = u"Hello World"
+    t1.name = request.form['name']
     t1.save()
-    return "success"
-
+    return 'true'
 
 # GET: /test/int:id
 @app.route('/test/<int:id>', methods=['GET'])
 def get_test(id):
     t1 = TestMap.get(id)
     return t1.name
+
+
+###########################
+# Main
 
 # connect and run
 if __name__ == '__main__':

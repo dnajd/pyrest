@@ -1,6 +1,4 @@
-######################################
-# POST /test/new/
-######################################
+import sys
 import urllib
 import httplib
 import json
@@ -8,7 +6,9 @@ import json
 # setup
 uri = '127.0.0.1'
 headers = {"Content-type": "application/x-www-form-urlencoded","Accept": "text/plain"}
-params = urllib.urlencode({'key': 2, 'name': 'hello'})
+arg1 = sys.argv[1]
+arg2 = sys.argv[2]
+params = urllib.urlencode({'key': arg1, 'name': arg2})
 
 # connect & request
 conn = httplib.HTTPConnection(uri, 5000)

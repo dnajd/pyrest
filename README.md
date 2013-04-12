@@ -20,23 +20,23 @@ PyRest Scripts
 ==============
 Run these scripts to see the example code work
 
-1. Create a mock dynamo db
+Create a mock dynamo db
 
     python src/main/db_create.py
 
-2. Start rests services (in separate terminal)
+Start rests services (in separate terminal)
 
     python src/main/rest_test.py
 
-3. Post data through rest service to mock dynamo db
+Post data through rest service to mock dynamo db
 
     python src/main/post_rest_test.py 1 'hello world'
 
-4. Read back the data by browsing to REST service /test/1    
+Read back the data by browsing to REST service /test/1    
 
     http://127.0.0.1:5000/test/1
 
-5. Clean up the mock dynamodb
+Clean up the mock dynamodb
 
     rm /tmp/pyrest.sqlite
 

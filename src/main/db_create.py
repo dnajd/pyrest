@@ -15,4 +15,4 @@ db = connect_boto_patch()                               # Wire-up boto and ddbmo
 conn = ConnectionBorg()
 
 # create table
-conn.create_table(TestMap, 10, 10) #, wait_for_active=True) # create table
+conn.create_table(TestMap, 10, 10, False)

@@ -20,7 +20,7 @@ PyRest Scripts
 ==============
 Run these scripts to see the example code work
 
-Create a mock dynamo db
+Create a mock dynamo db; NOTE: you'll have to ctrl-z to break this script due to create_table bug
 
     python src/main/db_create.py
 
@@ -32,9 +32,9 @@ Post data through rest service to mock dynamo db
 
     python src/main/post_rest_test.py 1 'hello world'
 
-Read back the data by browsing to REST service /test/1    
+Read back the data from mock dynamo db through rest service
 
-    http://127.0.0.1:5000/test/1
+    python src/main/get_rest_test.py 1
 
 Clean up the mock dynamodb
 

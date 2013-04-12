@@ -4,6 +4,7 @@ from dynamodb_mapper.model import DynamoDBModel
 from dynamodb_mapper.model import ConnectionBorg
 from ddbmock import config
 from ddbmock import connect_boto_patch
+import flask
 from flask import Flask
 from flask import request
 from db_models import TestMap
@@ -36,7 +37,7 @@ def post_test():
 @app.route('/test/<int:id>', methods=['GET'])
 def get_test(id):
     t1 = TestMap.get(id)
-    return t1.name
+    return flask.jsonify(**t1.to_json_dict())
 
 
 ###########################

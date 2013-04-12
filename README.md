@@ -11,9 +11,9 @@ Pip & sqlite
     sudo apt-get install pip    
     sudo apt-get install sqlite3 libsqlite3-dev
 
-Pip Install Python Packages
+Install Python Packages
 
-    pip, flask, boto, dynamodb-mapper, urllib, httplib, json
+    flask, boto, dynamodb-mapper, urllib, httplib, json
 
 
 PyRest Scripts

@@ -28,7 +28,7 @@ app = Flask(__name__)
 def post_test():
     # create map
     t1 = TestMap()
-    t1.test_key = 1
+    t1.test_key = int(request.form['key'])
     t1.name = request.form['name']
     t1.save()
     return 'true'
